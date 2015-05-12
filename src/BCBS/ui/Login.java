@@ -60,6 +60,8 @@ public class Login extends JPanel {
 
 		label_1 = new JLabel("");
 		label_1.setBackground(Color.WHITE);
+		
+		// Shit vi er retarerede at lave en .jpg.png
 		Image img  = new ImageIcon(this.getClass().getResource("/BCBS_LOGO.jpg")).getImage();
 		label_1.setIcon(new ImageIcon(img));
 		label_1.setBounds(117, 11, 366, 290);
