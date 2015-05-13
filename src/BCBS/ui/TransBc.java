@@ -79,7 +79,7 @@ public class TransBc extends JPanel {
 		return btnHjem;
 	}
 
-	public JButton getBtnHvBc() {
+	public JButton getBtnTransBc() {
 		return btnTransBc;
 	}
 	

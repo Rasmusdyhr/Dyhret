@@ -17,7 +17,6 @@ public class DBCon {
 	private static String sqlUser = "root";
 	private static String sqlPassword = "MySQL123";
 	private static String sqlDriver = "com.mysql.jdbc.Driver";
-	private String fail = "Failed";
 
 	private PreparedStatement selectAllUsers = null;
 	private PreparedStatement selectAdmin = null;

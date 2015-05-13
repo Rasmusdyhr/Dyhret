@@ -5,12 +5,9 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 import BCBS.data.Users;
-import BCBS.data.DBCon;
 
-import javax.swing.JTextField;
 import java.awt.Color;
 
 public class UserMenu extends JPanel {
@@ -92,5 +89,6 @@ public class UserMenu extends JPanel {
 		btnHjem.addActionListener(l);
 		btnIndstBc.addActionListener(l);
 		btnHvBc.addActionListener(l);
+		btnOverfrBc.addActionListener(l);
 	}
 }

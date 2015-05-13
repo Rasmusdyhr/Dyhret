@@ -1,10 +1,7 @@
 package BCBS.ui;
 
-import java.awt.BorderLayout;
 import java.awt.CardLayout;
-import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -13,12 +10,6 @@ import javax.swing.border.EmptyBorder;
 import BCBS.ui.Login;
 import BCBS.ui.UserMenu;
 import BCBS.ui.AdminMenu;
-import BCBS.logic.BCBSapp;
-import javax.swing.JButton;
-import javax.swing.JMenu;
-import java.awt.Color;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 public class Screen extends JFrame {
 	public static final String LOGIN = "login";
@@ -27,6 +18,9 @@ public class Screen extends JFrame {
 	public static final String INDSTBC = "indstbc";
 	public static final String HVBC = "hvbc";
 	public static final String TRANS = "trans";
+	public static final String VIS = "vis";
+	public static final String OPRET = "opret";
+	public static final String SLET = "slet";
 		
 	private Login login;
 	private UserMenu usermenu;
@@ -34,6 +28,9 @@ public class Screen extends JFrame {
 	private IndstBc indstbc;
 	private HvBc hvbc;
 	private TransBc trans;
+	private VisBruger vis;
+	private NyBruger opret;
+	private SletBruger slet;
 	private JPanel contentPane;
 	
 	private CardLayout c;
@@ -45,7 +42,7 @@ public class Screen extends JFrame {
 		
 		setTitle("CBS Bitcoin ATM");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 600, 500);
+		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new CardLayout(0, 0));
@@ -87,25 +84,41 @@ public class Screen extends JFrame {
 		trans.setBounds(100, 100, 600, 500);
 		trans.setLayout(null);
 		contentPane.add(trans, TRANS);
+		
+		opret = new NyBruger();
+		opret.setBackground(new Color(255, 255, 255));
+		opret.setBounds(100, 100, 600, 500);
+		opret.setLayout(null);
+		contentPane.add(opret, OPRET);
+		
+		slet = new SletBruger();
+		slet.setBackground(new Color(255, 255, 255));
+		slet.setBounds(100, 100, 600, 500);
+		slet.setLayout(null);
+		contentPane.add(slet, SLET);
+		
+		vis = new VisBruger();
+		vis.setBackground(new Color(255, 255, 255));
+		vis.setBounds(100, 100, 600, 500);
+		vis.setLayout(null);
+		contentPane.add(vis, VIS);
 				
 		c = (CardLayout) getContentPane().getLayout();
-		
 	}
-	
-	
-	public Login getLogin() {
+		
+	public Login getLogin(){
 		return login;
 	}
 
-	public UserMenu getUserMenu() {
+	public UserMenu getUserMenu(){
 		return usermenu;
 	}
 
-	public AdminMenu getAdminMenu() {
+	public AdminMenu getAdminMenu(){
 		return adminmenu;
 	}
 	
-	public IndstBc getIndstBc() {
+	public IndstBc getIndstBc(){
 		return indstbc;
 	}
 	
@@ -117,9 +130,19 @@ public class Screen extends JFrame {
 		return trans;
 	}
 	
-
+	public VisBruger getVisBruger(){
+		return vis;
+	}
+	
+	public NyBruger getNyBruger(){
+		return opret;
+	}
+	
+	public SletBruger getSletBruger(){
+		return slet;
+	}
+	
 	public void show(String card){
 		c.show(this.getContentPane(), card);
 	}
-
 }

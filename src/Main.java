@@ -8,5 +8,4 @@ public class Main {
 		BCBSapp bcbsApp = new BCBSapp();
 		bcbsApp.run();
 	}
-
 }

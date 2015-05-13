@@ -1,20 +1,14 @@
 package BCBS.ui;
 
 import BCBS.data.DBCon;
-import BCBS.logic.BCBSapp;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-
-
 import javax.swing.JLabel;
 
-import BCBS.ui.Screen;
-
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPasswordField;
 
@@ -38,36 +32,34 @@ public class Login extends JPanel {
 		
 		setBackground(Color.WHITE);
 		setLayout(null);
-		setBounds(100, 100, 600, 500);
+		setBounds(100, 100, 800, 600);
 
 		tfUsername = new JTextField();
 		tfUsername.setColumns(10);
-		tfUsername.setBounds(200, 312, 200, 26);
+		tfUsername.setBounds(247, 312, 200, 26);
 		add(tfUsername);
 
 		tfPassword = new JPasswordField();
 		tfPassword.setColumns(10);
-		tfPassword.setBounds(200, 359, 200, 26);
+		tfPassword.setBounds(247, 360, 200, 26);
 		add(tfPassword);
 		
 		btnLogin = new JButton("Login");
-		btnLogin.setBounds(200, 414, 89, 23);
+		btnLogin.setBounds(247, 414, 89, 23);
 		add(btnLogin);
 
 		btnAfslut = new JButton("Afslut");
-		btnAfslut.setBounds(313, 414, 89, 23);
+		btnAfslut.setBounds(358, 414, 89, 23);
 		add(btnAfslut);
 
 		label_1 = new JLabel("");
 		label_1.setBackground(Color.WHITE);
-		
-		// Shit vi er retarerede at lave en .jpg.png
 		Image img  = new ImageIcon(this.getClass().getResource("/BCBS_LOGO.jpg")).getImage();
 		label_1.setIcon(new ImageIcon(img));
-		label_1.setBounds(117, 11, 366, 290);
+		label_1.setBounds(160, 11, 366, 290);
 		add(label_1);
 		
-		lblPing = new JLabel("Connection: Succesful");
+		lblPing = new JLabel("Connection: " + "");
 		lblPing.setBounds(10, 11, 563, 23);
 		add(lblPing);
 	}
