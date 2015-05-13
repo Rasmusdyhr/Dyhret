@@ -5,7 +5,6 @@ public class SystemInfo {
 	public boolean ConInfo() {
 		boolean Con = false;
 		
-		if 
 		
 		
 		// Changing 
